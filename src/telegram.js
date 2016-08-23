@@ -140,7 +140,7 @@ class TelegramBot extends EventEmitter {
       throw new Error(`Error parsing Telegram response: ${String(json)}`);
     }
   }
-  
+
   _fixReplyMarkup(obj) {
     const replyMarkup = obj.reply_markup;
     if (replyMarkup && typeof replyMarkup !== 'string') {
@@ -648,7 +648,7 @@ class TelegramBot extends EventEmitter {
     form.longitude = longitude;
     return this._request('sendLocation', { form });
   }
-  
+
   /**
    * Send venue.
    * Use this method to send information about a venue.
@@ -669,6 +669,24 @@ class TelegramBot extends EventEmitter {
     form.title = title;
     form.address = address;
     return this._request('sendVenue', { form });
+  }
+
+  /**
+   * Send contact.
+   * Use this method to send phone contacts.
+   *
+   * @param  {Number|String} chatId  Unique identifier for the message recipient
+   * @param  {String} phone_number Contact's phone number
+   * @param  {String} first_name Contact's first name
+   * @param  {Object} [options] Additional Telegram query options
+   * @return {Promise}
+   * @see https://core.telegram.org/bots/api#sendcontact
+   */
+  sendContact(chatId, phone_number, first_name, form = {}) {
+    form.chat_id = chatId;
+    form.phone_number = phone_number;
+    form.first_name = first_name;
+    return this._request('sendContact', { form });
   }
 
   /**
