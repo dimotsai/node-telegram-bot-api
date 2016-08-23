@@ -13,6 +13,7 @@ const path = require('path');
 const URL = require('url');
 const fs = require('fs');
 const pump = require('pump');
+const extend = require('extend');
 
 const _messageTypes = [
   'text', 'audio', 'document', 'photo', 'sticker', 'video', 'voice', 'contact',
@@ -41,6 +42,7 @@ class TelegramBot extends EventEmitter {
    * @param {Boolean|Object} [options.webHook=false] Set true to enable WebHook or set options
    * @param {String} [options.webHook.key] PEM private key to webHook server.
    * @param {String} [options.webHook.cert] PEM certificate (public) to webHook server.
+   * @param {Object} [options.request] Options which will be added for all requests to telegram api.
    * @see https://core.telegram.org/bots/api
    */
   constructor(token, options = {}) {
@@ -153,6 +155,10 @@ class TelegramBot extends EventEmitter {
   _request(_path, options = {}) {
     if (!this.token) {
       throw new Error('Telegram Bot Token not provided!');
+    }
+
+    if (this.options.request) {
+      extend(true, options, this.options.request);
     }
 
     if (options.form) {
