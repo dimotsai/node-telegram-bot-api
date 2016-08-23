@@ -1,5 +1,14 @@
 >
-> **This is an almost up-to-date fork of the source repo. It is intended
+> **This is an almost up-to-date fork of the source repo. The open PRs
+> at yagop/node-telegram-bot-api are drafted periodically against this
+> repo, with the intention of merging them in, as fast as possible.
+> This allows us to try out most of the fixes and features, before they
+> are published in the official releases**
+>
+> **Do not draft any pull-request against this repo. It is NOT a
+> replacement of the source/original repo.**
+>
+> **This is intended
 > to be used for development purposes (in production, you are on your own),
 > as we wait for @yagop to get some time and merge the open PRs.**
 >
