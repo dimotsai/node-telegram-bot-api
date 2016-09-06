@@ -832,6 +832,7 @@ class TelegramBot extends EventEmitter {
       user_id: userId
     };
     return this._request('getChatMember', { form });
+  };
 
   /**
    * Leave a group, supergroup or channel.
