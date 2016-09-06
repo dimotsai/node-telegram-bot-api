@@ -1,6 +1,6 @@
 {
-  "name": "node-telegram-bot-api",
-  "version": "0.23.3",
+  "name": "node-telegram-bot-api-latest",
+  "version": "0.1.0",
   "description": "Telegram Bot API",
   "main": "./lib/telegram.js",
   "directories": {
@@ -14,9 +14,7 @@
     "bot"
   ],
   "scripts": {
-    "prepublish": "babel -d ./lib src",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec --timeout 10000",
-    "prepublish:test": "npm run prepublish && npm run test",
     "gen-doc": "jsdoc2md --src src/telegram.js -t README.hbs > README.md",
     "eslint": "eslint ./src"
   },
