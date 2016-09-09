@@ -1,5 +1,5 @@
 {
-  "name": "node-telegram-bot-api-latest",
+  "name": "node-telegram-bot-api",
   "version": "0.1.0",
   "description": "Telegram Bot API",
   "main": "./lib/telegram.js",
