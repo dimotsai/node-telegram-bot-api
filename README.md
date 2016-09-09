@@ -10,7 +10,11 @@
 >
 > **This is intended
 > to be used for development purposes (in production, you are on your own),
-> as we wait for @yagop to get some time and merge the open PRs.**
+> as we wait for @yagop to get some time and merge the open PRs.
+> Before using this fork, please ensure you understand that I am NOT
+> assuring you that all the PRs will be merged in the source repo. This
+> is for advanced users, who just can not wait for some of the cool PRs
+> to be merged to start using them asap.**
 >
 
 <!--[![Build Status](https://travis-ci.org/yagop/node-telegram-bot-api.svg?branch=master)](https://travis-ci.org/yagop/node-telegram-bot-api) [![Build status](https://ci.appveyor.com/api/projects/status/ujko6bsum3g5msjh/branch/master?svg=true)](https://ci.appveyor.com/project/yagop/node-telegram-bot-api/branch/master) [![Coverage Status](https://coveralls.io/repos/yagop/node-telegram-bot-api/badge.svg?branch=master)](https://coveralls.io/r/yagop/node-telegram-bot-api?branch=master) [![bitHound Score](https://www.bithound.io/github/yagop/node-telegram-bot-api/badges/score.svg)](https://www.bithound.io/github/yagop/node-telegram-bot-api) [![https://telegram.me/node_telegram_bot_api](https://img.shields.io/badge/💬 Telegram-node__telegram__bot__api-blue.svg)](https://telegram.me/node_telegram_bot_api) [![https://telegram.me/Yago_Perez](https://img.shields.io/badge/💬 Telegram-Yago__Perez-blue.svg)](https://telegram.me/Yago_Perez)
@@ -30,8 +34,9 @@ From **npm**:
 $ npm install node-telegram-bot-api-latest    # note the '-latest' suffix
 ```
 
-**Note:** you will have to `require("node-telegram-bot-api-latest")`
-(note the -latest suffix) instead since it is a different package.
+**Note:** If you use **npm**, you'll have to `require("node-telegram-bot-api-latest")`
+(note the -latest suffix) instead, since it is a different package. Otherwise,
+keep using `require("node-telegram-bot-api")` as if it is the original package.
 
 
 ```js
